@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rua.png-d07928d964a1b7066a3a2d8e0238625e.stex"
+path="res://.import/bueiro_-_aberto.png-85272d11aa68330caa67406714912dbb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/stage/rua.png"
-dest_files=[ "res://.import/rua.png-d07928d964a1b7066a3a2d8e0238625e.stex" ]
+source_file="res://sprites/stage/bueiro_-_aberto.png"
+dest_files=[ "res://.import/bueiro_-_aberto.png-85272d11aa68330caa67406714912dbb.stex" ]
 
 [params]
 

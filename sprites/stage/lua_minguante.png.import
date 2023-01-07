@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rua.png-d07928d964a1b7066a3a2d8e0238625e.stex"
+path="res://.import/lua_minguante.png-1e1527a309fad32bc9bde28ead530d45.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/stage/rua.png"
-dest_files=[ "res://.import/rua.png-d07928d964a1b7066a3a2d8e0238625e.stex" ]
+source_file="res://sprites/stage/lua_minguante.png"
+dest_files=[ "res://.import/lua_minguante.png-1e1527a309fad32bc9bde28ead530d45.stex" ]
 
 [params]
 

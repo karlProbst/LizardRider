@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rua.png-d07928d964a1b7066a3a2d8e0238625e.stex"
+path="res://.import/POSTE_-_PARTE_DE_CIMA.png-bdae0a25f1898d6ba389e591539155fa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/stage/rua.png"
-dest_files=[ "res://.import/rua.png-d07928d964a1b7066a3a2d8e0238625e.stex" ]
+source_file="res://sprites/stage/POSTE_-_PARTE_DE_CIMA.png"
+dest_files=[ "res://.import/POSTE_-_PARTE_DE_CIMA.png-bdae0a25f1898d6ba389e591539155fa.stex" ]
 
 [params]
 
