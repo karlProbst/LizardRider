@@ -8,26 +8,30 @@ export (int) var speed = 200
 onready var rua_speed =  $"/root/Main".vel
 # Called when the node enters the scene tree for the first time.
 onready var skate_sprite = $AnimatedSprite
+onready var skate_sprite2 = $AnimatedSprite2
 func _ready():
 	pass
 	state=States.WALKING
 
 func _process(delta):
 	rua_speed =  $"/root/Main".vel
-	skate_sprite.speed_scale=rua_speed/40
+	skate_sprite2.speed_scale=rua_speed/40
 	delta = delta
 	match state:
 		States.IDLE:
 			skate_sprite.animation="idle"
+			skate_sprite2.animation="idle"
 		States.WALKING:
 			skate_sprite.animation="walking"
+			skate_sprite2.animation="walking"
 		States.MANUAL:
 			skate_sprite.animation="manual"
+			skate_sprite2.animation="manual"
 			#if skate_sprite.frame==2:
 			#	skate_sprite.frame=1
 			#	skate_sprite.play()
 				
-			print(skate_sprite.frame)
+			
 	velocity = move_and_slide(velocity)
 	
 func _input(event):

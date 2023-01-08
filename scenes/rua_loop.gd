@@ -13,20 +13,20 @@ func _ready():
 	initial_position = rua.global_position.x
 	
 func LoopAround(node,node2,initial_position,scale):
+	var velocity = Delta*vel
 	if node.global_position.x <= 0:
-		node.global_position.x += initial_position*2-Delta*vel
+		node.global_position.x += initial_position*2-velocity
 	if node2.global_position.x <= 0:
-		node2.global_position.x += initial_position*2-Delta*vel
-	node.global_position.x-=Delta*vel*scale
-	node2.global_position.x-=Delta*vel*scale
+		node2.global_position.x += initial_position*2-velocity
+	node.global_position.x-=velocity*scale
+	node2.global_position.x-=velocity*scale
+	node.position.x = round(node.position.x)
+	node2.position.x = round(node2.position.x)
 func _process(delta):
 	Delta = delta
-	print(rua.global_position.x)
 	#loop rua
 	light_node.texture.noise_offset.x+=vel*delta
-					  
-	
-	LoopAround(rua,rua2,initial_position,1)
+	LoopAround(rua,rua2,320,1)
 	LoopAround(background,background2,initial_position,0.01)
 	
 
