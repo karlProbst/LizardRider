@@ -6,11 +6,9 @@
 
 [sub_resource type="OpenSimplexNoise" id=3]
 period = 71.3
-persistence = 0.064
-lacunarity = 1.74
+persistence = 0.928
 
 [sub_resource type="NoiseTexture" id=2]
-seamless = true
 noise = SubResource( 3 )
 
 [node name="Area2D" type="Area2D"]

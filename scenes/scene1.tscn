@@ -16,7 +16,7 @@
 noise = SubResource( 22 )
 
 [sub_resource type="OccluderPolygon2D" id=21]
-polygon = PoolVector2Array( 5, 0, -6, -3, -5, 0 )
+polygon = PoolVector2Array( 5, 0, 0, -10, -5, 0 )
 
 [sub_resource type="CapsuleShape2D" id=4]
 radius = 6.0
@@ -180,6 +180,7 @@ shape = SubResource( 4 )
 position = Vector2( 0, -16 )
 frames = SubResource( 28 )
 animation = "idle"
+frame = 3
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Dude"]

@@ -1,4 +1,4 @@
-extends Area2D
+extends Node
 
 onready var light = $Light2D
 var wave : float = 0
@@ -8,5 +8,6 @@ func _process(delta):
 	wave +=delta*2
 	if(wave>999):
 		wave -=999
-	light.texture.noise_offset.x+=10*delta
-	light.texture.noise.persistence=sin(wave)/5
+	light.texture.noise_offset.y+=1*delta
+	light.texture.noise_offset.x-=1*delta
+	#light.texture.noise.period=sin(wave)*5+0.75
