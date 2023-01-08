@@ -9,6 +9,7 @@ period = 71.3
 persistence = 0.928
 
 [sub_resource type="NoiseTexture" id=2]
+flags = 3
 noise = SubResource( 3 )
 
 [node name="Area2D" type="Area2D"]

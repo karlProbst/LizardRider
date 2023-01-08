@@ -12,12 +12,16 @@ persistence = 1.0
 lacunarity = 0.1
 
 [sub_resource type="NoiseTexture" id=3]
+flags = 0
 noise = SubResource( 2 )
 
 [sub_resource type="Gradient" id=4]
 
 [sub_resource type="GradientTexture2D" id=5]
+flags = 0
 gradient = SubResource( 4 )
+width = 16
+height = 16
 fill_from = Vector2( 0.295833, 0.178646 )
 fill_to = Vector2( 0.304167, 0.711979 )
 
@@ -240,8 +244,8 @@ range_layer_min = -1
 range_item_cull_mask = 256
 
 [node name="Light2D2" type="Light2D" parent="."]
-position = Vector2( -160, 74 )
-scale = Vector2( 5, 0.71875 )
+position = Vector2( -160, 74.5 )
+scale = Vector2( 20, 2.8125 )
 texture = SubResource( 5 )
 color = Color( 0.0588235, 0, 0.403922, 1 )
 energy = 2.98

@@ -180,7 +180,7 @@ shape = SubResource( 4 )
 position = Vector2( 0, -16 )
 frames = SubResource( 28 )
 animation = "idle"
-frame = 3
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Dude"]
