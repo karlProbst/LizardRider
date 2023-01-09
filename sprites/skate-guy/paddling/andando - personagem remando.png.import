@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/walking - dude.png-3277d691681cc8d23276e3eeb92874c8.stex"
+path="res://.import/andando - personagem remando.png-fc4ed07d4acbe00be92a5a9c34712395.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/skate-guy/walking/walking - dude.png"
-dest_files=[ "res://.import/walking - dude.png-3277d691681cc8d23276e3eeb92874c8.stex" ]
+source_file="res://sprites/skate-guy/paddling/andando - personagem remando.png"
+dest_files=[ "res://.import/andando - personagem remando.png-fc4ed07d4acbe00be92a5a9c34712395.stex" ]
 
 [params]
 
