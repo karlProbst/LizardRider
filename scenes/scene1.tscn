@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://sk8.gd" type="Script" id=1]
 [ext_resource path="res://sprites/skate-guy/walking/walking - lizard.png" type="Texture" id=2]
@@ -10,11 +10,20 @@
 [ext_resource path="res://Background.tscn" type="PackedScene" id=8]
 [ext_resource path="res://sky.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/skate-guy/paddling/andando - personagem remando.png" type="Texture" id=10]
+[ext_resource path="res://sprites/skate-guy/pulo lagarto/pulo largarto - parte 3.png" type="Texture" id=11]
+[ext_resource path="res://sprites/skate-guy/pulo lagarto/pulo largarto - parte 1.png" type="Texture" id=12]
+[ext_resource path="res://sprites/skate-guy/pulo lagarto/pulo largarto - parte 2.png" type="Texture" id=13]
+[ext_resource path="res://scenes/shadow.gd" type="Script" id=14]
 
 [sub_resource type="OpenSimplexNoise" id=22]
 
 [sub_resource type="NoiseTexture" id=23]
 noise = SubResource( 22 )
+
+[sub_resource type="CapsuleMesh" id=57]
+radius = 8.339
+radial_segments = 12
+rings = 1
 
 [sub_resource type="OccluderPolygon2D" id=21]
 polygon = PoolVector2Array( 5, 0, 0, -10, -5, 0 )
@@ -22,6 +31,46 @@ polygon = PoolVector2Array( 5, 0, 0, -10, -5, 0 )
 [sub_resource type="CapsuleShape2D" id=4]
 radius = 6.0
 height = 11.3333
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=29]
 atlas = ExtResource( 2 )
@@ -41,9 +90,29 @@ region = Rect2( 0, 96, 32, 32 )
 
 [sub_resource type="SpriteFrames" id=17]
 animations = [ {
+"frames": [ SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ) ],
+"loop": true,
+"name": "air",
+"speed": 5.0
+}, {
 "frames": [  ],
 "loop": true,
 "name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 43 ), SubResource( 44 ), SubResource( 44 ), SubResource( 44 ) ],
+"loop": false,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 55 ), SubResource( 56 ) ],
+"loop": true,
+"name": "landed",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 45 ), SubResource( 46 ) ],
+"loop": false,
+"name": "landing",
 "speed": 5.0
 }, {
 "frames": [  ],
@@ -73,9 +142,29 @@ region = Rect2( 0, 96, 32, 32 )
 atlas = ExtResource( 3 )
 region = Rect2( 0, 64, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=49]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 96, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 4 )
@@ -85,9 +174,9 @@ region = Rect2( 0, 32, 32, 32 )
 atlas = ExtResource( 4 )
 region = Rect2( 0, 64, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 4 )
-region = Rect2( 0, 96, 32, 32 )
+region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=33]
 atlas = ExtResource( 10 )
@@ -128,9 +217,19 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"frames": [ SubResource( 53 ), SubResource( 54 ) ],
+"loop": false,
+"name": "jump",
+"speed": 1.0
+}, {
+"frames": [ SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ) ],
 "loop": true,
 "name": "manual",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 9 ) ],
+"loop": true,
+"name": "manual_start",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 36 ) ],
@@ -178,11 +277,24 @@ energy = 0.72
 shadow_enabled = true
 shadow_buffer_size = 32
 
+[node name="Shadow" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0, 0, 0.282353 )
+position = Vector2( 140, 161 )
+scale = Vector2( 1, 0.240005 )
+mesh = SubResource( 57 )
+script = ExtResource( 14 )
+
+[node name="Timer" type="Timer" parent="Shadow"]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
 [node name="Dude" type="KinematicBody2D" parent="."]
 position = Vector2( 140, 160 )
 script = ExtResource( 1 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Dude"]
+visible = false
 occluder = SubResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dude"]
@@ -190,17 +302,23 @@ visible = false
 position = Vector2( 0, -12 )
 shape = SubResource( 4 )
 
-[node name="AnimatedSprite2" type="AnimatedSprite" parent="Dude"]
-position = Vector2( 0, -16 )
+[node name="Lizard" type="AnimatedSprite" parent="Dude"]
+position = Vector2( 0, -15 )
 frames = SubResource( 17 )
-animation = "walking"
+animation = "landed"
 playing = true
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Dude"]
-position = Vector2( 0, -16 )
+[node name="Guy" type="AnimatedSprite" parent="Dude"]
+position = Vector2( 0, -14 )
 frames = SubResource( 28 )
-animation = "paddling"
-frame = 4
+animation = "jump"
+frame = 1
 playing = true
+
+[node name="Ollie_Timer" type="Timer" parent="Dude"]
+one_shot = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[connection signal="timeout" from="Shadow/Timer" to="Shadow" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Dude/Ollie_Timer" to="Dude" method="_on_Timer_timeout"]

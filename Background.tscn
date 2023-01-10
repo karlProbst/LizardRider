@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://sprites/stage/cidade_fundo.png" type="Texture" id=1]
 [ext_resource path="res://sprites/stage/cidade_fundo_-_abaixo_do_horizonte.png" type="Texture" id=2]
@@ -10,6 +10,12 @@
 period = 17.2
 persistence = 0.857
 lacunarity = 2.48
+
+[sub_resource type="NoiseTexture" id=8]
+flags = 0
+width = 256
+height = 256
+noise = SubResource( 2 )
 
 [sub_resource type="NoiseTexture" id=3]
 flags = 0
@@ -235,19 +241,19 @@ position = Vector2( 256, -256 )
 scale = Vector2( 1.6, 5.27835 )
 texture = SubResource( 1 )
 
-[node name="Light2D" type="Light2D" parent="."]
+[node name="Lake" type="Light2D" parent="."]
 show_behind_parent = true
 light_mask = 256
 position = Vector2( -160, 78.3108 )
 scale = Vector2( 1.25, 0.175781 )
-texture = SubResource( 3 )
+texture = SubResource( 8 )
 color = Color( 0.0588235, 0, 0.403922, 1 )
 energy = 2.98
 range_layer_min = -1
 range_item_cull_mask = 256
 shadow_item_cull_mask = 256
 
-[node name="Light2D3" type="Light2D" parent="."]
+[node name="Lake2" type="Light2D" parent="."]
 show_behind_parent = true
 light_mask = 256
 position = Vector2( -160, 78.3108 )
@@ -260,7 +266,7 @@ range_layer_min = -1
 range_item_cull_mask = 256
 shadow_item_cull_mask = 256
 
-[node name="Light2D4" type="Light2D" parent="."]
+[node name="Gradient" type="Light2D" parent="."]
 light_mask = 256
 position = Vector2( -160, 78.89 )
 scale = Vector2( 4.99593, 1.47531 )
@@ -270,3 +276,12 @@ energy = 3.82
 range_layer_min = -1
 range_item_cull_mask = 256
 shadow_item_cull_mask = 256
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
